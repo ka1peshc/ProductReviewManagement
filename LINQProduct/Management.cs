@@ -24,7 +24,20 @@ namespace LINQProduct
                     + " Review : " + list.Review + " isLike : " + list.isLike);
             }
         }
-
-
+        /// <summary>
+        /// UC3 Retrive record who's rating is greater than 3 and product id is 3,4,9
+        /// </summary>
+        /// <param name="listProductReview"></param>
+        public void SelectedRecord(List<ProductReview> listProductReview)
+        {
+            var recordData = from ProductReview in listProductReview
+                             where (ProductReview.ProductID == 3 || ProductReview.ProductID == 4 || ProductReview.ProductID == 9) && ProductReview.Rating > 3
+                             select ProductReview;
+            foreach (var list in recordData)
+            {
+                Console.WriteLine("ProductID : " + list.ProductID + " UserID : " + list.UserID + " Rating : " + list.Rating
+                    + " Review : " + list.Review + " isLike : " + list.isLike);
+            }
+        }
     }
 }

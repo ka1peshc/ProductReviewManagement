@@ -34,7 +34,11 @@ namespace LINQProduct
             //}
 
             Management management = new Management();
-            management.TopRecords(productReviewList);
+            //UC 2
+            //management.TopRecords(productReviewList);
+
+            //UC 3
+            management.SelectedRecord(productReviewList);
         }
     }
 }
