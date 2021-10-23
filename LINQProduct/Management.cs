@@ -31,7 +31,7 @@ namespace LINQProduct
         public void SelectedRecord(List<ProductReview> listProductReview)
         {
             var recordData = from ProductReview in listProductReview
-                             where (ProductReview.ProductID == 3 || ProductReview.ProductID == 4 || ProductReview.ProductID == 9) && ProductReview.Rating > 3
+                             where (ProductReview.ProductID == 1 || ProductReview.ProductID == 4 || ProductReview.ProductID == 9) && ProductReview.Rating > 3
                              select ProductReview;
             foreach (var list in recordData)
             {
