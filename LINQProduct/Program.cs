@@ -56,8 +56,8 @@ namespace LINQProduct
             //UC 9
             ProductDataTable pdt = new ProductDataTable();
             DataTable table = pdt.AddToDatatable();
-            pdt.DisplayProductReview(table);
-
+            //pdt.DisplayProductReview(table);
+            pdt.AvgRating(table);
         }
     }
 }
