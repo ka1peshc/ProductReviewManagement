@@ -47,7 +47,10 @@ namespace LINQProduct
             //management.RetrieveCountOfRecords(productReviewList);
 
             //UC 5
-            management.RetrieveProductIdAndReview(productReviewList);
+            //management.RetrieveProductIdAndReview(productReviewList);
+
+            //UC 6
+            management.SkipFiveRecord(productReviewList);
 
         }
     }

@@ -64,5 +64,18 @@ namespace LINQProduct
                 Console.WriteLine("Product id : " + list.ProductID + " Review : " + list.Review);
             }
         }
+        /// <summary>
+        /// UC 6 skip 5 records
+        /// </summary>
+        /// <param name="listProductReview"></param>
+        public void SkipFiveRecord(List<ProductReview> listProductReview)
+        {
+            var records = (from product in listProductReview select product).Skip(5);
+            foreach (var list in records)
+            {
+                Console.WriteLine("ProductID : " + list.ProductID + " UserID : " + list.UserID + " Rating : " + list.Rating
+                    + " Review : " + list.Review + " isLike : " + list.isLike);
+            }
+        }
     }
 }
