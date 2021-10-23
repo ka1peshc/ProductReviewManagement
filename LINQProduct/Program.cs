@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 
 namespace LINQProduct
 {
@@ -50,7 +51,12 @@ namespace LINQProduct
             //management.RetrieveProductIdAndReview(productReviewList);
 
             //UC 6
-            management.SkipFiveRecord(productReviewList);
+            //management.SkipFiveRecord(productReviewList);
+
+            //UC 9
+            ProductDataTable pdt = new ProductDataTable();
+            DataTable table = pdt.AddToDatatable();
+            pdt.DisplayProductReview(table);
 
         }
     }
