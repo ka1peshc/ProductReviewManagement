@@ -67,5 +67,18 @@ namespace LINQProduct
             //var result = table.AsEnumerable() select 
             Console.WriteLine("Average rating is {0}", Math.Floor(result));
         }
+
+        public void FetchNiceWord(DataTable table)
+        {
+            DataRow[] records = table.Select();
+            for (int i = 0; i < records.Length; i++)
+            {
+                if (records[i][3].Equals("nice"))
+                {
+                    Console.WriteLine("product id :" + records[i][0] + " User id: " + records[i][1] + " Rating :" + records[i][2] +
+                    " Review :" + records[i][3] + " isLike :" + records[i][4]);
+                }
+            }
+        }
     }
 }
