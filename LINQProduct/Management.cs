@@ -39,7 +39,10 @@ namespace LINQProduct
                     + " Review : " + list.Review + " isLike : " + list.isLike);
             }
         }
-
+        /// <summary>
+        /// UC 4 Retrieve count of product id
+        /// </summary>
+        /// <param name="listProductReview"></param>
         public void RetrieveCountOfRecords(List<ProductReview> listProductReview)
         {
             var recordCount = listProductReview.GroupBy(x => x.ProductID)
@@ -47,6 +50,18 @@ namespace LINQProduct
             foreach( var list in recordCount)
             {
                 Console.WriteLine("Product id : " + list.ProductID + " Count " + list.Count);
+            }
+        }
+        /// <summary>
+        /// UC 5 Retrieve product id and review
+        /// </summary>
+        /// <param name="listProductReview"></param>
+        public void RetrieveProductIdAndReview(List<ProductReview> listProductReview)
+        {
+            var recordPidReview = from product in listProductReview select (product.ProductID, product.Review);
+            foreach (var list in recordPidReview)
+            {
+                Console.WriteLine("Product id : " + list.ProductID + " Review : " + list.Review);
             }
         }
     }
