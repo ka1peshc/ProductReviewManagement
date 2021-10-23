@@ -57,8 +57,12 @@ namespace LINQProduct
             ProductDataTable pdt = new ProductDataTable();
             DataTable table = pdt.AddToDatatable();
             //pdt.DisplayProductReview(table);
+            //UC 10
             //pdt.AvgRating(table);
-            pdt.FetchNiceWord(table);
+            //UC 11
+            //pdt.FetchNiceWord(table);
+            //UC 12
+            pdt.FetchUserTen(table);
         }
     }
 }
